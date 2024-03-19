@@ -5,18 +5,17 @@ public class Student {
     private String password;
     private int yearEnrolled;
     private String firstName;
-    private Status status;
     private String lastName;
     private String programme;
     private String department;
-    private Date dateOfBirth;
+
     private Long phoneNumber;
     private String email;
     private String nextOfKin;
     private String guardianNumber;
     private String address;
 
-    public Student(String hitmail, String password, int yearEnrolled, String firstName, Status status, String lastName, String programme, String department, Date dateOfBirth, Long phoneNumber, String email, String nextOfKin, String guardianNumber, String address) {
+    public Student(String hitmail, int yearEnrolled, String firstName, String lastName, String programme, String department, Long phoneNumber, String email, String nextOfKin, String guardianNumber, String address) {
     }
 
     public String getHitmail() {
@@ -51,13 +50,7 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public Status getStatus() {
-        return status;
-    }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
 
     public String getLastName() {
         return lastName;
@@ -81,14 +74,6 @@ public class Student {
 
     public void setDepartment(String department) {
         this.department = department;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
     }
 
     public Long getPhoneNumber() {
@@ -132,7 +117,3 @@ public class Student {
     }
 }
 
-enum Status {
-    ACTIVE,
-    INACTIVE
-}
